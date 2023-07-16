@@ -1,0 +1,18 @@
+
+.page-holder{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(231, 231, 231);
+}
+
+.container{
+    max-width: 800px;
+    margin: auto;
+
+}
+
+.colors-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}

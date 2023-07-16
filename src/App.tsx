@@ -1,9 +1,9 @@
 // import { useEffect, useState } from 'react'
 import './assets/styles/App.css'
-import ColorProject from './assets/pages/ColorProject'
+import ColorProject from './pages/ColorProject'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './assets/pages/Home'
-import NoPage from './assets/pages/NoPage'
+import Home from './pages/Home'
+import NoPage from './pages/NoPage'
 
 function App() {
 

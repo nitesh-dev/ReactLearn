@@ -1,0 +1,57 @@
+.color {
+    width: 150px;
+    border-radius: 4px;
+    padding: 12px;
+    background-color: white;
+}
+
+.color>div {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 4px;
+    position: relative;
+}
+
+.color>span {
+    text-align: center;
+    display: block;
+    margin: 4px 0;
+    color: rgb(0, 51, 109);
+}
+
+.color div span {
+    text-align: right;
+    display: block;
+    background-color: rgb(1, 64, 83);
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    padding: 2px 8px;
+    border-radius: 50px;
+    font-size: 14px;
+    opacity: 0;
+}
+
+.color .clipboard{
+    animation-name: clipboard-animation;
+    animation-duration: 1.5s;
+}
+
+@keyframes clipboard-animation {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90%{
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
