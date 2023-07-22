@@ -1,30 +1,43 @@
 import { useState } from 'react'
 import '../assets/styles/color.css'
 
-function Color(props: { colorValue: string }) {
+function toStringColor(hue: number,
+    saturation: number,
+    lightness: number) {
+
+    return `hsl(${hue}, ${saturation}%, ${lightness}%)`
+}
+
+function Color(props: {
+    colorValue: {
+        hue: number,
+        saturation: number,
+        lightness: number
+    }
+}) {
 
     const [checked, setChecked] = useState(false)
 
     function onClick() {
 
-        if(checked) return
+        if (checked) return
         setChecked(true)
-        setTimeout(function(){
+        setTimeout(function () {
             setChecked(false)
         }, 1500)
 
         // adding to clipboard
-        navigator.clipboard.writeText(props.colorValue)
-        
+        navigator.clipboard.writeText(toStringColor(props.colorValue.hue, props.colorValue.saturation, props.colorValue.lightness))
+
     }
 
     return (
         <>
             <div onClick={onClick} className="color">
-                <div style={{ backgroundColor: props.colorValue }}>
-                    <span className={checked?'clipboard':''}>Copied!</span>
+                <div style={{ backgroundColor: toStringColor(props.colorValue.hue, props.colorValue.saturation, props.colorValue.lightness) }}>
+                    <span className={checked ? 'clipboard' : ''}>Copied!</span>
                 </div>
-                <span>{props.colorValue}</span>
+                <span>{toStringColor(props.colorValue.hue, props.colorValue.saturation, props.colorValue.lightness)}</span>
             </div>
         </>
     )
