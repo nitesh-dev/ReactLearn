@@ -8,6 +8,7 @@
 .container{
     max-width: 800px;
     margin: auto;
+    overflow: auto;
 
 }
 
@@ -15,4 +16,42 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
+}
+
+.input-color-holder{
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 8px;
+    width: max-content;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 12px;
+    border: 1px solid rgb(216, 216, 216);
+    position: relative;
+}
+
+.input-color-holder input{
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+.input-color-holder span{
+    font-size: 18px;
+    color: #00357a;
+    width: 200px;
+    text-align: center;
+}
+
+.input-color-holder div{
+    width: 60px;
+    height: 60px;
+    background-color: aqua;
+    border-radius: 8px;
 }
